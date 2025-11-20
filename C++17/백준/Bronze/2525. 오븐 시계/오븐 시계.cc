@@ -13,7 +13,7 @@ int main() {
     }
     
     if (hour >= 24) {
-        hour -= 24;
+        hour %= 24;
     }
     
     printf("%d %d", hour, minute);
