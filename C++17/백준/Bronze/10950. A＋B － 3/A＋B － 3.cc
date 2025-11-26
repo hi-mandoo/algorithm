@@ -4,11 +4,11 @@ using namespace std;
 
 int main() {
     int testCase;
-    cin >> testCase;
+    scanf("%d", &testCase);
     
     for (int i = 0; i < testCase; i++) {
         int a, b;
-        cin >> a >> b;
+        scanf("%d %d", &a, &b);
         printf("%d\n", a + b);
     }
 }
