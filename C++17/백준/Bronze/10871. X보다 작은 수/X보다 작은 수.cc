@@ -2,21 +2,18 @@
 using namespace std;
 
 int main() {
-    int n, x;
-    scanf("%d %d", &n, &x);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     
-    int count = 0;
+    int n, x;
+    cin >> n >> x;
+    
     for (int i = 0; i < n; i++) {
         int input;
         cin >> input;
 
         if (input < x) {
-            if (count == 0) {
-                count++;
-                printf("%d", input);
-            } else {
-                printf(" %d", input);
-            }
+            cout << input << " ";        
         }
     }
 }
