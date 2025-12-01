@@ -1,10 +1,12 @@
 #include <iostream>
-#include <utility>
 using namespace std;
 
 int main() {
-    int a, b;
-    scanf("%d %d", &a, &b);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    long long a, b;
+    cin >> a >> b;
     
     if (a > b) {
         swap(a, b);
@@ -13,9 +15,9 @@ int main() {
     if (a == b) {
         cout << 0;
     } else {
-        printf("%d\n", b - a - 1);
-        for (int i = a + 1; i< b; i++) {
-            printf("%d ", i);
+        cout << b - a - 1 << "\n";
+        for (long long i = a + 1; i< b; i++) {
+            cout << i << " ";
         }
     }
 }
