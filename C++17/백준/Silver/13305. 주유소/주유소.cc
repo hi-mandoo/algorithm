@@ -8,8 +8,8 @@ int main() {
 
     int n;
     cin >> n;
-    vector<int> length(n, 0);
-    vector<int> costs(n, 0);
+    vector<long long> length(n, 0);
+    vector<long long> costs(n, 0);
 
     for (int i = 0; i < n - 1; i++) {
         cin >> length[i];
@@ -19,18 +19,12 @@ int main() {
         cin >> costs[i];
     }
 
-    int total = 0;
-    int location = 0;
+    long long min_cost = costs[0];
+    long long total = 0;
 
-    while (location < n - 1) {
-        total += costs[location] * length[location];
-        int count = 0;
-        for (int j = location + 1; j < n - 1; j++) {
-            if (costs[location] > costs[j]) break;
-            total += costs[location] * length[j];
-            count++;
-        }
-        location += count + 1;
+    for (int i = 0; i < n - 1; i++) {
+        min_cost = min(min_cost, costs[i]);
+        total += min_cost * length[i];
     }
     cout << total;
 }
